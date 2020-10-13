@@ -39,8 +39,10 @@ case $BRANCH in
 		#KERNELSOURCE='http://github.com/amarula/linux-amarula'
 		#KERNELSOURCE='https://github.com/icenowy/linux'
 		#KERNELBRANCH='branch:linux-4.19.y'
-		KERNELBRANCH='branch:master'
+		#KERNELBRANCH='branch:master'
 		#KERNELBRANCH='branch:aosc-sunxi64-5.1-rc4-pinetab'
+		KERNELSOURCE="http://github.com/megous/linux"
+		KERNELBRANCH="branch:orange-pi-5.9"
 		KERNELDIR=$MAINLINE_KERNEL_DIR
 		KERNELPATCHDIR='sunxi-next'
 		KERNEL_USE_GCC='> 7.0'
