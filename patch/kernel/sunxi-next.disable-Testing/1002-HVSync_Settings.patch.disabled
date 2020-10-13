@@ -1,5 +1,5 @@
 diff --git a/drivers/gpu/drm/panel/panel-ilitek-ili9881c.c b/drivers/gpu/drm/panel/panel-ilitek-ili9881c.c
-index b6a3a025c..9a202f32d 100644
+index 632def873..b6d4be997 100644
 --- a/drivers/gpu/drm/panel/panel-ilitek-ili9881c.c
 +++ b/drivers/gpu/drm/panel/panel-ilitek-ili9881c.c
 @@ -373,18 +373,18 @@ static int ili9881c_unprepare(struct drm_panel *panel)
@@ -17,7 +17,7 @@ index b6a3a025c..9a202f32d 100644
 -	.htotal		= 720 + 10 + 20 + 30,
 +	.hsync_start	= 720 + 18,
 +	.hsync_end	= 720 + 18 + 12,
-+	.htotal		= 720 + 18 + 12,
++	.htotal		= 720 + 18 + 12 + 2,
  
  	.vdisplay	= 1280,
 -	.vsync_start	= 1280 + 10,
@@ -25,7 +25,7 @@ index b6a3a025c..9a202f32d 100644
 -	.vtotal		= 1280 + 10 + 10 + 20,
 +	.vsync_start	= 1280 + 8,
 +	.vsync_end	= 1280 + 8 + 14,
-+	.vtotal		= 1280 + 8 + 14,
++	.vtotal		= 1280 + 8 + 14 + 2,
  };
  
  static int ili9881c_get_modes(struct drm_panel *panel)
