@@ -1,7 +1,8 @@
 ARCH=arm64
 ATF_TARGET_MAP="PLAT=$ATF_PLAT DEBUG=1 bl31;;build/$ATF_PLAT/debug/bl31.bin"
 BOOTDELAY=1
-BOOTBRANCH='tag:v2020.10'
+#BOOTBRANCH='tag:v2020.10'
+BOOTBRANCH='branch:master'
 BOOTPATCHDIR='u-boot-sunxi'
 BOOTENV_FILE='sunxi.txt'
 UBOOT_TARGET_MAP=';;spl/sunxi-spl.bin u-boot.itb'
@@ -19,7 +20,7 @@ case $BRANCH in
 
 	current)
 
-		KERNELSOURCE="https://github.com/megous/linux"
+		KERNELSOURCE="https://github.com/GavinBauerLinux/linux"
 		KERNELBRANCH="branch:orange-pi-5.8"
 		KERNELPATCHDIR='sunxi-'$BRANCH
 
