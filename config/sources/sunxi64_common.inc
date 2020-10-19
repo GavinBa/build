@@ -42,7 +42,7 @@ case $BRANCH in
 		#KERNELBRANCH='branch:master'
 		#KERNELBRANCH='branch:aosc-sunxi64-5.1-rc4-pinetab'
 		KERNELSOURCE="http://github.com/megous/linux"
-		KERNELBRANCH="branch:orange-pi-5.9"
+		KERNELBRANCH="branch:orange-pi-5.8"
 		KERNELDIR=$MAINLINE_KERNEL_DIR
 		KERNELPATCHDIR='sunxi-next'
 		KERNEL_USE_GCC='> 7.0'

@@ -284,6 +284,7 @@ compile_kernel()
 
 	# read kernel version
 	local version=$(grab_version "$kerneldir")
+	
 
 	# build 3rd party drivers
 #	compilation_prepare
@@ -575,6 +576,7 @@ advanced_patch()
 			fi
 		done
 	done
+	display_alert "Finished Patching" "" "info"
 }
 
 # process_patch_file <file> <description>
@@ -606,9 +608,12 @@ process_patch_file()
 userpatch_create()
 {
 	# create commit to start from clean source
+	display_alert "Starting git add" "" "info"
 	git add .
+	display_alert "Setting up git user" "" "info"
 	git -c user.name='Armbian User' -c user.email='user@example.org' commit -q -m "Cleaning working copy"
 
+	display_alert "Checking existing patches" "" "info"
 	local patch="$DEST/patch/$1-$LINUXFAMILY-$BRANCH.patch"
 
 	# apply previous user debug mode created patches
